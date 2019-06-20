@@ -15,4 +15,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-!function(e){e.Views.MessagesCollection=e.Views.CollectionBase.extend({className:"messages-collection",getChildView:function(s){return e.Views.Message}})}(Mibew);
+! function(e) {
+    e.Views.MessagesCollection = e.Views.CollectionBase.extend({
+        className: "messages-collection",
+        getChildView: function(s) {
+            return e.Views.Message
+        }
+    })
+}(Mibew);
