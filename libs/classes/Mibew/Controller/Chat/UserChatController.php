@@ -64,6 +64,7 @@ class UserChatController extends AbstractController
 
         // Initialize client side application
         $this->getAssetManager()->attachJs('js/compiled/chat_app.js');
+        $this->getAssetManager()->attachCss('styles/chats/default/client_chat.css');
         $this->getAssetManager()->attachJs(
             $this->startJsApplication($request, $page),
             AssetManagerInterface::INLINE,
@@ -213,7 +214,8 @@ class UserChatController extends AbstractController
                     )
                 );
                 $page['surveyOptions'] = $page['survey'];
-
+                
+                $this->getAssetManager()->attachCss('styles/chats/default/client_chat.css');
                 $this->getAssetManager()->attachJs(
                     $this->startJsApplication($request, $page),
                     AssetManagerInterface::INLINE,
@@ -290,6 +292,7 @@ class UserChatController extends AbstractController
 
         // Initialize client side application
         $this->getAssetManager()->attachJs('js/compiled/chat_app.js');
+        $this->getAssetManager()->attachCss('styles/chats/default/client_chat.css');
         $this->getAssetManager()->attachJs(
             $this->startJsApplication($request, $page),
             AssetManagerInterface::INLINE,
