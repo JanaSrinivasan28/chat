@@ -67,16 +67,16 @@ img {
 }
 #chat-header {
     position: relative;
-    padding: 0 10px;
+    /* padding: 0 10px; */
     background: #f1f2f2 url("images/chatheaderbg.gif") scroll repeat-x 0 0;
     _zoom: 1; /* IE6 fix */
 }
 #chat {
-    padding: 0 10px;
+    /* padding: 0 10px; */
     background: #f1f2f2;
 }
 #message {
-    padding: 0 10px;
+    /* padding: 0 10px; */
     background: #f1f2f2;
 }
 #send {
@@ -243,18 +243,18 @@ a:hover .image-close-window {
     background: #ffffff url("images/chatbgl.gif") scroll repeat-y 0 0;
 }
 #chat .background-right {
-    background: transparent url("images/chatbgr.gif") scroll repeat-y 100% 0;
+   /* background: transparent url("images/chatbgr.gif") scroll repeat-y 100% 0; */
 }
 #chat .background-shady-center {
-    background: transparent url("images/sdwbgc.png") scroll repeat-x 0 100%;
+    /* background: transparent url("images/sdwbgc.png") scroll repeat-x 0 100%; */
 }
 #chat .background-shady-left {
-    background: transparent url("images/sdwbgl.png") scroll no-repeat 0 100%;
+    /* background: transparent url("images/sdwbgl.png") scroll no-repeat 0 100%; */
 }
 #chat .background-shady-right {
     position: relative;
-    padding: 0 4px 40px;
-    background: transparent url("images/sdwbgr.png") scroll no-repeat 100% 100%;
+    padding: 0 4px 0px;
+   /* background: transparent url("images/sdwbgr.png") scroll no-repeat 100% 100%; */
     _zoom: 1; /* IE6 fix */
 }
 #status-region {
@@ -294,7 +294,7 @@ a:hover .image-close-window {
     border: none;
 }
 #messages-region {
-    height: 200px;
+    height: 310px !important;
     min-height: 150px;
     overflow-y: auto;
     padding: 10px 10px 0;
@@ -330,15 +330,17 @@ a:hover .image-close-window {
 
 /* message area (#message) */
 #message .background-center {
-    background: #ffffff url("images/message.png") scroll repeat-x 0 -95px;
+   // background: #ffffff url("images/message.png") scroll repeat-x 0 -95px;
 }
 #message .background-left {
-    background: transparent url("images/message.png") scroll no-repeat 0 0;
+   // background: transparent url("images/message.png") scroll no-repeat 0 0;
 }
 #message .background-right {
-    height: 58px;
-    padding: 14px 14px 23px;
-    background: transparent url("images/message.png") scroll no-repeat 100% -190px;
+   // height: 58px;
+   //padding: 14px 14px 23px;
+    padding: 4px 5px 5px;
+   // background: transparent url("images/message.png") scroll no-repeat 100% -190px;
+   width: 391px;
 }
 #message-input {
     overflow: auto;
@@ -350,7 +352,7 @@ a:hover .image-close-window {
     font-size: 12px;
     font-family: Tahoma, sans-serif;
     border: 0 none;
-    background: transparent;
+   // background: transparent;
     resize: none; /* disable resize textarea in Google Chrome, Safari and Firefox 4 */
 }
 
@@ -359,8 +361,8 @@ a:hover .image-close-window {
 }
 #send-message, .submit-button {
     float: right;
-    width: 190px;
-    height: 33px;
+    width: 38px;
+    height: 43px;
     font-weight: normal;
     font-size: 17px;
     font-family: Arial, sans-serif;
@@ -368,11 +370,12 @@ a:hover .image-close-window {
     text-align: center;
     text-decoration: none;
     color: #495151;
-    background: url("images/submit.gif") no-repeat 0 0 transparent;
+    background: url("images/m6BFtJQW.png") no-repeat 0 0 transparent;
+    margin-top: -47px;
 }
 #send-message:hover, .submit-button:hover {
     color: #000000;
-    background: url("images/submit.gif") no-repeat -190px 0 transparent;
+    //background: url("images/submit.gif") no-repeat -190px 0 transparent;
 }
 #predefined-wrapper {
     float: left;

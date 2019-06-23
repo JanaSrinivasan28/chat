@@ -31,7 +31,8 @@
         2: function(a, n, e, l, t) {
             var s, r = a.lambda,
                 i = a.escapeExpression;
-            return "                <a onclick=\"window.open('" + i(r(null != (s = null != n ? n.page : n) ? s.mibewHost : s, n)) + '\');return false;" href="' + i(r(null != (s = null != n ? n.page : n) ? s.mibewHost : s, n)) + '">\n                    <img src="' + i(r(null != (s = null != (s = null != n ? n.page : n) ? s.company : s) ? s.chatLogoURL : s, n)) + '" alt=""/>\n                </a>\n'
+            var checkIsAgent = (s = null != n ? n.user : n) ? s.isAgent : s;
+            return "                <a onclick=\"window.open('" + i(r(null != (s = null != n ? n.page : n) ? s.mibewHost : s, n)) + '\');return false;" href="' + i(r(null != (s = null != n ? n.page : n) ? s.mibewHost : s, n)) + '">\n                    <img src="' + i(r(null != (s = null != (s = null != n ? n.page : n) ? s.company : s) ? (checkIsAgent) ? '/chat/styles/chats/default/images/access_one_chat_server_logo.png' : s.chatLogoURL : s, n)) + '" alt=""/>\n                </a>\n'
         },
         4: function(a, n, e, l, t) {
             var s;
@@ -258,11 +259,12 @@ function() {
     Handlebars.templates = Handlebars.templates || {};
     Handlebars.templates["chat/message_form"] = Handlebars.template({
         1: function(a, n, e, l, t) {
-            return '    <div class="background-center"><div class="background-left"><div class="background-right">\n        <textarea id="message-input" class="message" tabindex="0" rows="4" cols="10"></textarea>\n    </div></div></div>\n'
+            return '    <div class="background-center"><div class="background-left"><div class="background-right">\n        <textarea id="message-input" class="message" tabindex="0" rows="2" cols="10"></textarea>\n    </div></div></div>\n'
         },
         3: function(a, n, e, l, t) {
             var s, r = null != n ? n : a.nullContext || {},
                 i = e.helperMissing;
+            var checkIsAgent = (s = null != n ? n.user : n) ? s.isAgent : s;
             return '    <div id="post-message">\n        <div id="predefined-wrapper">\n' + (null != (s = e["if"].call(r, null != (s = null != n ? n.user : n) ? s.isAgent : s, {
                 name: "if",
                 hash: {},
@@ -273,7 +275,7 @@ function() {
                 name: "l10n",
                 hash: {},
                 data: t
-            })) + '">' + (null != (s = (e.l10n || n && n.l10n || i).call(r, "Send ({0})", null != n ? n.sendShortcut : n, {
+            })) + '">' + (null != (s = (e.l10n || n && n.l10n || i).call(r, (checkIsAgent) ? "Send" : "", null != n ? n.sendShortcut : n, {
                 name: "l10n",
                 hash: {},
                 data: t
